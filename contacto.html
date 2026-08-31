@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Roa Tours & Co.</title>
+    <meta name="description" content="Book your experience in Roatán with Roa Tours & Co.. Contact us for tours, transportation, and personalized adventures.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="imagenes/logo56.PNG" alt="Roa Tours & Co.">
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" onclick="closeNav()"><span>Home</span></a>
+                <div class="nav-dropdown" id="navDropdown">
+                    <a href="tours.html" class="nav-dropdown-toggle" onclick="closeNav()">
+                        <span>Our Services</span> <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                    <div class="nav-dropdown-menu">
+                        <a href="cruise-packages.html"><i class="fa-solid fa-ship"></i> <span>Cruise Packages</span></a>
+                        <a href="actividades.html"><i class="fa-solid fa-water"></i> <span>Activities</span></a>
+                        <a href="recorridos.html"><i class="fa-solid fa-compass"></i> <span>Tours</span></a>
+                    </div>
+                </div>
+                <a href="about.html" onclick="closeNav()"><span>About Us</span></a>
+                <a href="mision-vision.html" onclick="closeNav()"><span>Mission & Vision</span></a>
+                <a href="experiencia.html" onclick="closeNav()"><span>Experiences</span></a>
+                <a href="contacto.html" class="active" onclick="closeNav()"><span>Contact Us</span></a>
+                <a href="mailto:roatours.co@gmail.com" class="nav-email" onclick="closeNav()">
+                    <i class="fa-solid fa-envelope"></i> <span>roatours.co@gmail.com</span>
+                </a>
+                <a href="contacto.html" class="btn btn-gold" style="padding: 10px 24px; font-size: 0.85rem;" onclick="closeNav()">
+                    <i class="fa-brands fa-whatsapp"></i> <span>Book Now</span>
+                </a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div class="page-banner">
+        <div class="page-banner-bg"></div>
+        <div class="page-banner-overlay"></div>
+        <div class="container">
+            <div class="page-banner-breadcrumb">
+                <a href="index.html"><span>Home</span></a>
+                <i class="fa-solid fa-chevron-right"></i>
+                <span>Contact</span>
+            </div>
+            <h2 class="section-title mx-auto" style="max-width: 500px;">Contact</h2>
+            <p class="section-subtitle mx-auto">We are ready to help you plan the best experience in Roatán.</p>
+        </div>
+    </div>
+
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info reveal-left">
+                    <div class="contact-item">
+                        <div class="contact-item-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>West Bay, Roatán,<br>Honduras</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>roatours.co@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon"><i class="fa-solid fa-clock"></i></div>
+                        <div>
+                            <h4>Hours</h4>
+                            <p>6:00 AM – 5:00 PM<br>Every day</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p>Immediate response<br>+504 9852-5055</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form reveal-right" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Full name</label>
+                            <input type="text" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" placeholder="your.email@example.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input type="tel" placeholder="+504 9852-5055">
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea placeholder="Tell us about your ideal experience in Roatán..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="align-self: flex-start;">
+                        <i class="fa-solid fa-paper-plane"></i> <span>Send Message</span>
+                    </button>
+                </form>
+            </div>
+
+            <div class="contact-map reveal">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3871.437862171844!2d-86.613!3d16.299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f69d7a7b7b7b7b7%3A0x0!2sWest+Bay%2C+Roat%C3%A1n%2C+Honduras!5e0!3m2!1ses!2shn!4v1" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <h3><img src="imagenes/logo56.PNG" alt="Roa Tours & Co." style="height:80px;width:auto;"></h3>
+                        <p>Your gateway to the most incredible experiences in Roatán. Private tours, maritime adventures, and memories that will last a lifetime.</p>
+                        <div class="footer-social">
+                            <a href="https://wa.me/50498525055" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                            <a href="https://www.instagram.com/roatoursco?igsh=MTVydDY3Y2Rvamd6OA==" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/share/1B8gHcDvG8/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://www.tiktok.com/@roatoursco?_r=1&_t=ZS-96ARDwmn1Gb" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="index.html"><span>Home</span></a></li>
+                            <li><a href="tours.html"><span>Our Services</span></a></li>
+                            <li><a href="recorridos.html"><span>Tours</span></a></li>
+                            <li><a href="actividades.html"><span>Activities</span></a></li>
+                            <li><a href="about.html"><span>About Us</span></a></li>
+                            <li><a href="mision-vision.html"><span>Mission & Vision</span></a></li>
+                            <li><a href="experiencia.html"><span>Experiences</span></a></li>
+                            <li><a href="contacto.html"><span>Contact Us</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Our Services</h4>
+                        <ul>
+                            <li><a href="cruise-packages.html"><span>Cruise Packages</span></a></li>
+                            <li><a href="actividades.html"><span>Activities</span></a></li>
+                            <li><a href="recorridos.html"><span>Tours</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col footer-newsletter">
+                        <h4>Stay Updated</h4>
+                        <p>Get special offers and news about our tours in Roatán.</p>
+                        <form onsubmit="event.preventDefault(); alert('¡Gracias por suscribirte!');">
+                            <input type="email" placeholder="Your email" required>
+                            <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-arrow-right"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© 2026 <span>Roa Tours & Co.</span> — <span>All rights reserved. Roatán, Honduras 🌴</span></p>
+                <p class="footer-quote">"Thank you for joining us at the start. This is just the beginning and we are ready to make every adventure an unforgettable memory. ☀️🌊"</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-buttons">
+        <a href="https://wa.me/50498525055" target="_blank" rel="noopener" class="floating-btn whatsapp" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span class="floating-tooltip">WhatsApp</span>
+        </a>
+        <a href="https://www.instagram.com/roatoursco?igsh=MTVydDY3Y2Rvamd6OA==" target="_blank" rel="noopener" class="floating-btn instagram" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+            <span class="floating-tooltip">Instagram</span>
+        </a>
+        <a href="https://www.facebook.com/share/1B8gHcDvG8/?mibextid=wwXIfr" target="_blank" rel="noopener" class="floating-btn facebook" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+            <span class="floating-tooltip">Facebook</span>
+        </a>
+    </div>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script>
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button[type="submit"]');
+            const original = btn.innerHTML;
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Enviando...';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                btn.innerHTML = '<i class="fa-solid fa-check-circle"></i> Mensaje Enviado';
+                btn.style.background = 'linear-gradient(135deg, #43A047, #2E7D32)';
+
+                setTimeout(() => {
+                    btn.innerHTML = original;
+                    btn.disabled = false;
+                    btn.style.background = '';
+                    contactForm.reset();
+                }, 3000);
+            }, 1500);
+        });
+    </script>
+</body>
+</html>

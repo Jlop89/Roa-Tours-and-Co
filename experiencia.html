@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiences | Roa Tours & Co.</title>
+    <meta name="description" content="Live unique experiences in Roatán. Paradise beaches, crystal-clear sea, island culture, and water adventures.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="imagenes/logo56.PNG" alt="Roa Tours & Co.">
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" onclick="closeNav()"><span>Home</span></a>
+                <div class="nav-dropdown" id="navDropdown">
+                    <a href="tours.html" class="nav-dropdown-toggle" onclick="closeNav()">
+                        <span>Our Services</span> <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                    <div class="nav-dropdown-menu">
+                        <a href="cruise-packages.html"><i class="fa-solid fa-ship"></i> <span>Cruise Packages</span></a>
+                        <a href="actividades.html"><i class="fa-solid fa-water"></i> <span>Activities</span></a>
+                        <a href="recorridos.html"><i class="fa-solid fa-compass"></i> <span>Tours</span></a>
+                    </div>
+                </div>
+                <a href="about.html" onclick="closeNav()"><span>About Us</span></a>
+                <a href="mision-vision.html" onclick="closeNav()"><span>Mission & Vision</span></a>
+                <a href="experiencia.html" class="active" onclick="closeNav()"><span>Experiences</span></a>
+                <a href="contacto.html" onclick="closeNav()"><span>Contact Us</span></a>
+                <a href="mailto:roatours.co@gmail.com" class="nav-email" onclick="closeNav()">
+                    <i class="fa-solid fa-envelope"></i> <span>roatours.co@gmail.com</span>
+                </a>
+                <a href="contacto.html" class="btn btn-gold" style="padding: 10px 24px; font-size: 0.85rem;" onclick="closeNav()">
+                    <i class="fa-brands fa-whatsapp"></i> <span>Book Now</span>
+                </a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div class="page-banner">
+        <div class="page-banner-bg"></div>
+        <div class="page-banner-overlay"></div>
+        <div class="container">
+            <div class="page-banner-breadcrumb">
+                <a href="index.html"><span>Home</span></a>
+                <i class="fa-solid fa-chevron-right"></i>
+                <span>Experiences</span>
+            </div>
+            <h2 class="section-title mx-auto" style="max-width: 500px;">Experiences</h2>
+            <p class="section-subtitle mx-auto">Experience Roatán through the eyes of those who have already discovered it.</p>
+        </div>
+    </div>
+
+    <section class="section experience" id="experience">
+        <div class="container">
+            <div class="exp-grid">
+                <div class="exp-item reveal" style="transition-delay: 0.1s;">
+                    <img src="imagenes/roatan-bg.jpg" alt="Paradise beaches" loading="lazy">
+                    <div class="exp-item-overlay">
+                        <h4>Paradise beaches</h4>
+                        <p>White sand and turquoise waters</p>
+                    </div>
+                </div>
+                <div class="exp-item reveal" style="transition-delay: 0.2s;">
+                    <img src="imagenes/e3.jpg" alt="Crystal clear sea" loading="lazy">
+                    <div class="exp-item-overlay">
+                        <h4>Crystal clear sea</h4>
+                        <p>The largest coral reef in the Caribbean</p>
+                    </div>
+                </div>
+                <div class="exp-item reveal" style="transition-delay: 0.3s;">
+                    <img src="imagenes/CAROTWOREEFMAYAN-2.jpg" alt="Island culture" loading="lazy">
+                    <div class="exp-item-overlay">
+                        <h4>Island culture</h4>
+                        <p>Tradition, color and Caribbean warmth</p>
+                    </div>
+                </div>
+                <div class="exp-item reveal" style="transition-delay: 0.4s;">
+                    <img src="imagenes/dolphin 1.jpeg" alt="Water adventures" loading="lazy">
+                    <div class="exp-item-overlay">
+                        <h4>Water adventures</h4>
+                        <p>Snorkel, diving and more</p>
+                    </div>
+                </div>
+                <div class="exp-item reveal" style="transition-delay: 0.5s;">
+                    <img src="imagenes/Roatan-Exclusive-Customizable-Tours-Parasail-2-2.jpg" alt="Relax and luxury" loading="lazy">
+                    <div class="exp-item-overlay">
+                        <h4>Relax and luxury</h4>
+                        <p>The paradise you deserve</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exp-quotes">
+                <div class="exp-quote reveal" style="transition-delay: 0.1s;">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p>"Every tour is an unforgettable memory."</p>
+                </div>
+                <div class="exp-quote reveal" style="transition-delay: 0.2s;">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p>"Experience Roatán like never before."</p>
+                </div>
+                <div class="exp-quote reveal" style="transition-delay: 0.3s;">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p>"Your next adventure starts here."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section reviews-section" id="reviews">
+        <div class="container">
+            <div class="reviews-header text-center">
+                <span class="section-label">Reviews & Testimonials</span>
+                <h2 class="section-title">Experiences that speak for themselves</h2>
+                <p class="section-subtitle mx-auto">Discover what our travelers have to say and share your own experience with us.</p>
+                <a href="#review-form" class="btn btn-gold reviews-cta reveal">
+                    <i class="fa-solid fa-pen-fancy"></i> Share your experience
+                </a>
+            </div>
+
+            <div class="reviews-filters reveal">
+                <span class="reviews-filters-label">View reviews from:</span>
+                <div class="reviews-filters-list" id="reviewFilters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                </div>
+            </div>
+
+            <div class="reviews-stats reveal" id="reviewStats">
+                <div class="reviews-stats-item">
+                    <span class="reviews-stats-number" id="totalReviews">0</span>
+                    <span class="reviews-stats-label">Reviews</span>
+                </div>
+                <div class="reviews-stats-item">
+                    <span class="reviews-stats-number" id="avgRating">0.0</span>
+                    <span class="reviews-stats-label">Average rating</span>
+                </div>
+                <div class="reviews-stats-item">
+                    <span class="reviews-stats-number reviews-stars-avg" id="avgStars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </span>
+                    <span class="reviews-stats-label">Stars</span>
+                </div>
+            </div>
+
+            <div class="reviews-grid" id="reviewsGrid">
+                <div class="reviews-empty" id="reviewsEmpty">
+                    <i class="fa-regular fa-comment-dots"></i>
+                    <p>No reviews yet. Be the first to share your experience.</p>
+                </div>
+            </div>
+
+            <div class="review-form-wrapper" id="review-form">
+                <div class="review-form-card">
+                    <h3 class="review-form-title">
+                        <i class="fa-solid fa-pen-fancy"></i> Share your experience
+                    </h3>
+                    <p class="review-form-subtitle">Tell us how your tour or activity went. Your review helps other travelers.</p>
+                    <form id="reviewForm" class="review-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="reviewName">Your name *</label>
+                                <input type="text" id="reviewName" placeholder="e.g. John Smith" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="reviewTour">Tour or activity *</label>
+                                <select id="reviewTour" required>
+                                    <option value="" disabled selected>Select an experience</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Rating *</label>
+                                <div class="star-rating" id="starRating">
+                                    <i class="fa-solid fa-star" data-value="1"></i>
+                                    <i class="fa-solid fa-star" data-value="2"></i>
+                                    <i class="fa-solid fa-star" data-value="3"></i>
+                                    <i class="fa-solid fa-star" data-value="4"></i>
+                                    <i class="fa-solid fa-star" data-value="5"></i>
+                                </div>
+                                <input type="hidden" id="reviewRating" value="0">
+                            </div>
+                            <div class="form-group">
+                                <label for="reviewDate">Experience date (optional)</label>
+                                <input type="date" id="reviewDate">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="reviewComment">Your review or testimonial *</label>
+                            <textarea id="reviewComment" placeholder="Tell us about your experience, what you enjoyed most, the service, the scenery..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary review-submit-btn">
+                            <i class="fa-solid fa-paper-plane"></i> Submit review
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <h3><img src="imagenes/logo56.PNG" alt="Roa Tours & Co." style="height:80px;width:auto;"></h3>
+                        <p>Your gateway to the most incredible experiences in Roatán. Private tours, maritime adventures, and memories that will last a lifetime.</p>
+                        <div class="footer-social">
+                            <a href="https://wa.me/50498525055" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                            <a href="https://www.instagram.com/roatoursco?igsh=MTVydDY3Y2Rvamd6OA==" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/share/1B8gHcDvG8/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://www.tiktok.com/@roatoursco?_r=1&_t=ZS-96ARDwmn1Gb" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="index.html"><span>Home</span></a></li>
+                            <li><a href="tours.html"><span>Our Services</span></a></li>
+                            <li><a href="recorridos.html"><span>Tours</span></a></li>
+                            <li><a href="actividades.html"><span>Activities</span></a></li>
+                            <li><a href="about.html"><span>About Us</span></a></li>
+                            <li><a href="mision-vision.html"><span>Mission & Vision</span></a></li>
+                            <li><a href="experiencia.html"><span>Experiences</span></a></li>
+                            <li><a href="contacto.html"><span>Contact Us</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Our Services</h4>
+                        <ul>
+                            <li><a href="cruise-packages.html"><span>Cruise Packages</span></a></li>
+                            <li><a href="actividades.html"><span>Activities</span></a></li>
+                            <li><a href="recorridos.html"><span>Tours</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col footer-newsletter">
+                        <h4>Stay Updated</h4>
+                        <p>Get special offers and news about our tours in Roatán.</p>
+                        <form onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+                            <input type="email" placeholder="Your email" required>
+                            <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-arrow-right"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© 2026 <span>Roa Tours & Co.</span> — <span>All rights reserved. Roatán, Honduras 🌴</span></p>
+                <p class="footer-quote">"Thank you for joining us at the start. This is just the beginning and we are ready to make every adventure an unforgettable memory. ☀️🌊"</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-buttons">
+        <a href="https://wa.me/50498525055" target="_blank" rel="noopener" class="floating-btn whatsapp" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span class="floating-tooltip">WhatsApp</span>
+        </a>
+        <a href="https://www.instagram.com/roatoursco?igsh=MTVydDY3Y2Rvamd6OA==" target="_blank" rel="noopener" class="floating-btn instagram" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+            <span class="floating-tooltip">Instagram</span>
+        </a>
+        <a href="https://www.facebook.com/share/1B8gHcDvG8/?mibextid=wwXIfr" target="_blank" rel="noopener" class="floating-btn facebook" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+            <span class="floating-tooltip">Facebook</span>
+        </a>
+    </div>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

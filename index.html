@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roa Tours & Co. | Roatán, Honduras</title>
+    <meta name="description" content="Discover the magic of Roatán with Roa Tours & Co.. Unique experiences, unforgettable tours, and seaside adventures.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="imagenes/logo56.PNG" alt="Roa Tours & Co.">
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="active" onclick="closeNav()"><span>Home</span></a>
+                <div class="nav-dropdown" id="navDropdown">
+                    <a href="tours.html" class="nav-dropdown-toggle" onclick="closeNav()">
+                        <span>Our Services</span> <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                    <div class="nav-dropdown-menu">
+                        <a href="cruise-packages.html"><i class="fa-solid fa-ship"></i> <span>Cruise Packages</span></a>
+                        <a href="actividades.html"><i class="fa-solid fa-water"></i> <span>Activities</span></a>
+                        <a href="recorridos.html"><i class="fa-solid fa-compass"></i> <span>Tours</span></a>
+                    </div>
+                </div>
+                <a href="about.html" onclick="closeNav()"><span>About Us</span></a>
+                <a href="mision-vision.html" onclick="closeNav()"><span>Mission & Vision</span></a>
+                <a href="experiencia.html" onclick="closeNav()"><span>Experiences</span></a>
+                <a href="contacto.html" onclick="closeNav()"><span>Contact Us</span></a>
+                <a href="mailto:roatours.co@gmail.com" class="nav-email" onclick="closeNav()">
+                    <i class="fa-solid fa-envelope"></i> <span>roatours.co@gmail.com</span>
+                </a>
+                <a href="contacto.html" class="btn btn-gold" style="padding: 10px 24px; font-size: 0.85rem;" onclick="closeNav()">
+                    <i class="fa-brands fa-whatsapp"></i> <span>Book Now</span>
+                </a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <section class="hero" id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-float hero-float-1">
+            <i class="fa-solid fa-palm-tree"></i>
+        </div>
+        <div class="hero-float hero-float-2">
+            <i class="fa-solid fa-sun"></i>
+        </div>
+
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span>Discover the magic of Roatán</span>
+                <span>Explore · Dream · Live</span>
+            </h1>
+            <p class="hero-text">Unique experiences, unforgettable tours, and seaside adventures. Your next adventure starts here.</p>
+            <div class="hero-buttons">
+                <a href="tours.html" class="btn btn-primary">
+                    <i class="fa-solid fa-ship"></i> <span>View Tours</span>
+                </a>
+                <a href="contacto.html" class="btn btn-outline">
+                    <i class="fa-solid fa-calendar-check"></i> <span>Book Now</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-waves">
+            <svg viewBox="0 0 1440 150" preserveAspectRatio="none">
+                <path fill="#FFF8F0" d="M0,80 C360,140 720,20 1080,80 C1260,110 1350,95 1440,80 L1440,150 L0,150 Z"/>
+                <path fill="#FFFFFF" opacity="0.6" d="M0,100 C240,150 600,40 960,100 C1140,130 1290,115 1440,100 L1440,150 L0,150 Z" style="mix-blend-mode: overlay;"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ===== WHY US ===== -->
+    <section class="section" id="why-us">
+        <div class="container">
+            <div class="text-center reveal">
+                <span class="section-label"><i class="fa-solid fa-star"></i> <span>Why choose us?</span></span>
+                <h2 class="section-title mx-auto" style="max-width: 600px;">Why book with us?</h2>
+                <p class="section-subtitle mx-auto">We make your Roatán experience unforgettable, worry-free, and completely tailored to you.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card reveal" style="transition-delay: 0.1s;">
+                    <div class="feature-icon"><i class="fa-solid fa-ship"></i></div>
+                    <h3>🚢 Cruise Port Pickup</h3>
+                    <p>Meet us right outside the cruise terminal for a smooth and stress-free start to your adventure. No waiting, no crowded buses — just hop in and enjoy Roatán from the very first moment.</p>
+                </div>
+                <div class="feature-card reveal" style="transition-delay: 0.2s;">
+                    <div class="feature-icon"><i class="fa-solid fa-users"></i></div>
+                    <h3>👥 Private Tours</h3>
+                    <p>Enjoy a completely private experience with only your group. No strangers, no rush — every tour is personalized to match your interests and preferred pace.</p>
+                </div>
+                <div class="feature-card reveal" style="transition-delay: 0.3s;">
+                    <div class="feature-icon"><i class="fa-solid fa-map"></i></div>
+                    <h3>📍 Local Guides</h3>
+                    <p>Discover Roatán with knowledgeable local guides who know the island inside and out. We take you beyond the typical tourist spots to experience the true beauty and culture of the island.</p>
+                </div>
+                <div class="feature-card reveal" style="transition-delay: 0.4s;">
+                    <div class="feature-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+                    <h3>✨ Personalized Service</h3>
+                    <p>From your first message until the end of your tour, we are here to assist you every step of the way. Your comfort, happiness, and unforgettable experience are always our top priority.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="about-wrapper">
+                <div class="about-text reveal-left">
+                    <span class="section-label"><i class="fa-solid fa-map-pin"></i> <span>Welcome to Paradise</span></span>
+                    <h2>Discover the Beauty of Roatán, Honduras</h2>
+                    <p>Nestled in the heart of the Caribbean, Roatán is a tropical paradise known for its crystal-clear waters, white sandy beaches, vibrant coral reefs, and unforgettable island culture. From breathtaking marine life and lush jungles to relaxing beach escapes and thrilling adventures, Roatán offers experiences for every kind of traveler.</p>
+                    <p>At Roa Tours & Co.., we are passionate about creating memorable island experiences for our guests. Our commitment is to provide personalized service, trusted local guidance, and a wide variety of tours and activities designed to showcase the very best of Roatán. Whether you are looking for adventure, relaxation, nature, culture, or family-friendly fun, we are here to make your visit truly unforgettable.</p>
+                </div>
+                <div class="about-image reveal-right">
+                    <img src="imagenes/tour1.png" alt="Roatán, Honduras" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TOURS PREVIEW ===== -->
+    <section class="section" id="home-tours">
+        <div class="container">
+
+            <div class="text-center reveal">
+                <span class="section-label"><i class="fa-solid fa-compass"></i> <span>Explore</span></span>
+                <h2 class="section-title mx-auto" style="max-width: 600px;">Our Tours</h2>
+                <p class="section-subtitle mx-auto">Discover unique experiences designed to make your visit to Roatán an unforgettable memory.</p>
+            </div>
+
+            <div class="tours-grid">
+                <div class="tour-card reveal" style="transition-delay: 0.1s;">
+                    <div class="tour-card-image">
+                        <img src="imagenes/cayos.jpeg" alt="Cayos Cochinos" loading="lazy">
+                        <div class="tour-card-overlay"></div>
+                        <span class="tour-card-badge"><i class="fa-solid fa-star"></i> All Inclusive</span>
+                    </div>
+                    <div class="tour-card-body">
+                        <h3>Tour: Cayos Cochinos</h3>
+                        <p>Discover the hidden paradise of Cayos Cochinos with virgin beaches, guided snorkeling, local food, and drinks in an all-inclusive experience.</p>
+                        <div class="tour-card-footer">
+                            <a href="recorridos.html" class="tour-btn"><i class="fa-solid fa-eye"></i> <span>See more</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card reveal" style="transition-delay: 0.2s;">
+                    <div class="tour-card-image">
+                        <img src="imagenes/pigeon.jpeg" alt="Pigeon Cay" loading="lazy">
+                        <div class="tour-card-overlay"></div>
+                        <span class="tour-card-badge"><i class="fa-solid fa-star"></i> All Inclusive</span>
+                    </div>
+                    <div class="tour-card-body">
+                        <h3>Tour: Pigeon Cay</h3>
+                        <p>Discover Pigeon Cay with snorkeling, open bar, lunch, and the chance to swim alongside nurse sharks.</p>
+                        <div class="tour-card-footer">
+                            <a href="recorridos.html" class="tour-btn"><i class="fa-solid fa-eye"></i> <span>See more</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card reveal" style="transition-delay: 0.3s;">
+                    <div class="tour-card-image">
+                        <img src="imagenes/cari.jpeg" alt="Carribean Blue Tour" loading="lazy">
+                        <div class="tour-card-overlay"></div>
+                        <span class="tour-card-badge"><i class="fa-solid fa-clock"></i> All Inclusive</span>
+                    </div>
+                    <div class="tour-card-body">
+                        <h3>Carribean Blue Tour</h3>
+                        <p>Enjoy an all-inclusive boat tour with snorkeling at the most famous reefs in Roatán, open bar, and snacks.</p>
+                        <div class="tour-card-footer">
+                            <a href="recorridos.html" class="tour-btn"><i class="fa-solid fa-eye"></i> <span>See more</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center reveal" style="margin-top: 44px;">
+                <a href="recorridos.html" class="btn btn-primary"><i class="fa-solid fa-compass"></i> <span>View all tours</span></a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== ACTIVITIES PREVIEW ===== -->
+    <section class="section" id="home-activities">
+        <div class="container">
+
+            <div class="text-center reveal">
+                <span class="section-label"><i class="fa-solid fa-water"></i> <span>Activities</span></span>
+                <h2 class="section-title mx-auto" style="max-width: 600px;">Our Activities</h2>
+                <p class="section-subtitle mx-auto">From thrilling adventures to relaxing experiences, find the perfect activity for your day in Roatán.</p>
+            </div>
+
+            <div class="tours-grid">
+                <div class="tour-card reveal" style="transition-delay: 0.1s;">
+                    <div class="tour-card-image">
+                        <img src="imagenes/para1.jpeg" alt="Parasailing" loading="lazy" style="object-position: center 30%;">
+                        <div class="tour-card-overlay"></div>
+                        <span class="tour-card-badge"><i class="fa-solid fa-parachute"></i> Adventure</span>
+                    </div>
+                    <div class="tour-card-body">
+                        <h3>Parasailing</h3>
+                        <p>Fly over turquoise waters with 800 Ft of Line. Duration: 35 min. An unmatched panoramic view.</p>
+                        <div class="tour-card-footer">
+                            <a href="actividades.html" class="tour-btn"><i class="fa-solid fa-eye"></i> <span>See more</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tour-card reveal" style="transition-delay: 0.15s;">
+                    <div class="tour-card-image">
+                        <img src="imagenes/sno.jpeg" alt="Snorkeling Combo" loading="lazy">
+                        <div class="tour-card-overlay"></div>
+                        <span class="tour-card-badge"><i class="fa-solid fa-mask"></i> Classic</span>
+                    </div>
+                    <div class="tour-card-body">
+                        <h3>Snorkeling Combo</h3>
+                        <p>1-2 stops, fresh fruit, equipment included. Duration: 1 - 2.5 hrs. Explore the reef.</p>
+                        <div class="tour-card-footer">
+                            <a href="actividades.html" class="tour-btn"><i class="fa-solid fa-eye"></i> <span>See more</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tour-card reveal" style="transition-delay: 0.2s;">
+                    <div class="tour-card-image">
+                        <img src="imagenes/horse.jpeg" alt="Horseback Riding" loading="lazy">
+                        <div class="tour-card-overlay"></div>
+                        <span class="tour-card-badge"><i class="fa-solid fa-horse"></i> Nature</span>
+                    </div>
+                    <div class="tour-card-body">
+                        <h3>Horseback Riding</h3>
+                        <p>Ride along tropical paths into crystal-clear waters. Max weight: 250lbs. Duration: 45 min.</p>
+                        <div class="tour-card-footer">
+                            <a href="actividades.html" class="tour-btn"><i class="fa-solid fa-eye"></i> <span>See more</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tour-card reveal" style="transition-delay: 0.25s;">
+                    <div class="tour-card-image">
+                        <img src="imagenes/YATE.png" alt="Private Charters in Yacht" loading="lazy">
+                        <div class="tour-card-overlay"></div>
+                        <span class="tour-card-badge"><i class="fa-solid fa-sailboat"></i> Luxury</span>
+                    </div>
+                    <div class="tour-card-body">
+                        <h3>Private Charters in Yacht</h3>
+                        <p>Enjoy an exclusive private yacht experience tailored to your needs. Contact us for a personalized quote.</p>
+                        <div class="tour-card-footer">
+                            <a href="actividades.html" class="tour-btn"><i class="fa-solid fa-eye"></i> <span>See more</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center reveal" style="margin-top: 40px;">
+                <a href="actividades.html" class="btn btn-primary"><i class="fa-solid fa-water"></i> <span>View all activities</span></a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== PAQUETES PREVIEW ===== -->
+    <section class="section" id="home-paquetes" style="background: var(--cream);">
+        <div class="container">
+
+            <div class="text-center reveal">
+                <span class="section-label"><i class="fa-solid fa-ship"></i> <span>Cruise Packages</span></span>
+                <h2 class="section-title mx-auto" style="max-width: 600px;">Cruise Packages</h2>
+                <p class="section-subtitle mx-auto">You arrive by cruise and we take care of the rest. Experience Roatán worry-free with our all-inclusive packages.</p>
+            </div>
+
+            <div class="packages-grid">
+                <div class="package-card reveal" style="transition-delay: 0.1s;">
+                    <div class="package-card-image">
+                        <img src="imagenes/cruise1.jpeg" alt="Cruise Ship Adventure" loading="lazy">
+                    </div>
+                    <div class="package-card-header">
+                        <span class="package-number">Package 1</span>
+                        <h3>Cruise Ship Adventure</h3>
+                        <p style="margin-top: 10px; font-size: 1rem; font-weight: 600; color: var(--primary-dark);">Starting from $80 p.p · Minimum 4 people</p>
+                    </div>
+                    <div class="package-card-body">
+                        <p>Parasailing, catamaran, snorkeling, chocolate factory, mangroves, West Bay Beach and more. Ideal for those who want the complete experience.</p>
+                    </div>
+                    <div class="package-card-footer">
+                        <a href="cruise-package-1.html" class="btn btn-primary"><i class="fa-solid fa-eye"></i> <span>View package</span></a>
+                    </div>
+                </div>
+
+                <div class="package-card reveal" style="transition-delay: 0.2s;">
+                    <div class="package-card-image">
+                        <img src="imagenes/cruise2.jpeg" alt="Ultimate Cruise Escape" loading="lazy">
+                    </div>
+                    <div class="package-card-header">
+                        <span class="package-number">Package 2</span>
+                        <h3>Ultimate Cruise Escape</h3>
+                        <p style="margin-top: 10px; font-size: 1rem; font-weight: 600; color: var(--primary-dark);">Starting from $115 p.p · Minimum 4 people</p>
+                    </div>
+                    <div class="package-card-body">
+                        <p>Hacienda del Cielo animal park, mangroves, French Harbour, Jonesville and Punta Gorda. Culture, nature and authenticity.</p>
+                    </div>
+                    <div class="package-card-footer">
+                        <a href="cruise-package-2.html" class="btn btn-primary"><i class="fa-solid fa-eye"></i> <span>View package</span></a>
+                    </div>
+                </div>
+
+                <div class="package-card reveal" style="transition-delay: 0.3s;">
+                    <div class="package-card-image">
+                        <img src="imagenes/cruise3.jpeg" alt="Caribbean Tour" loading="lazy">
+                    </div>
+                    <div class="package-card-header">
+                        <span class="package-number">Package 3</span>
+                        <h3>Caribbean Tour</h3>
+                        <p style="margin-top: 10px; font-size: 1rem; font-weight: 600; color: var(--primary-dark);">Starting from $135 p.p · Minimum 4 people</p>
+                    </div>
+                    <div class="package-card-body">
+                        <p>West End, chocolate factory, snorkeling combo with divemaster, mangrove lagoon, dolphin sanctuary and beach time at Henry Morgan.</p>
+                    </div>
+                    <div class="package-card-footer">
+                        <a href="cruise-package-3.html" class="btn btn-primary"><i class="fa-solid fa-eye"></i> <span>View package</span></a>
+                    </div>
+                </div>
+
+                <div class="package-card reveal" style="transition-delay: 0.4s;">
+                    <div class="package-card-image">
+                        <img src="imagenes/cruise4.jpeg" alt="Build Your Own Island Adventure" loading="lazy">
+                    </div>
+                    <div class="package-card-header">
+                        <span class="package-number">Package 4</span>
+                        <h3>Build Your Own Island Adventure</h3>
+                        <p style="margin-top: 10px; font-size: 1rem; font-weight: 600; color: var(--primary-dark);">Starting from $80 p.p · Minimum 4 people</p>
+                    </div>
+                    <div class="package-card-body">
+                        <p>Create your ideal experience by combining activities: horseback riding, buggy, dolphin, parasailing, jet ski, canopy and much more.</p>
+                        <p class="package-pickup" style="margin-top:8px;">📍 Pickup & drop-off at the cruise port</p>
+                    </div>
+                    <div class="package-card-footer">
+                        <a href="cruise-package-4.html" class="btn btn-primary"><i class="fa-solid fa-eye"></i> <span>Build your package</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center reveal" style="margin-top: 44px;">
+                <a href="tours.html" class="btn btn-primary"><i class="fa-solid fa-ship"></i> <span>View all packages</span></a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== REVIEWS ===== -->
+    <section class="section reviews-section" id="reviews">
+        <div class="container">
+            <div class="reviews-header text-center">
+                <span class="section-label">Reviews & Testimonials</span>
+                <h2 class="section-title">Experiences that speak for themselves</h2>
+                <p class="section-subtitle mx-auto">Discover what our travelers have to say and share your own experience with us.</p>
+                <a href="#review-form" class="btn btn-gold reviews-cta reveal">
+                    <i class="fa-solid fa-pen-fancy"></i> Share your experience
+                </a>
+            </div>
+
+            <div class="reviews-filters reveal">
+                <span class="reviews-filters-label">View reviews from:</span>
+                <div class="reviews-filters-list" id="reviewFilters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                </div>
+            </div>
+
+            <div class="reviews-stats reveal" id="reviewStats">
+                <div class="reviews-stats-item">
+                    <span class="reviews-stats-number" id="totalReviews">0</span>
+                    <span class="reviews-stats-label">Reviews</span>
+                </div>
+                <div class="reviews-stats-item">
+                    <span class="reviews-stats-number" id="avgRating">0.0</span>
+                    <span class="reviews-stats-label">Average rating</span>
+                </div>
+                <div class="reviews-stats-item">
+                    <span class="reviews-stats-number reviews-stars-avg" id="avgStars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </span>
+                    <span class="reviews-stats-label">Stars</span>
+                </div>
+            </div>
+
+            <div class="reviews-grid" id="reviewsGrid">
+                <div class="reviews-empty" id="reviewsEmpty">
+                    <i class="fa-regular fa-comment-dots"></i>
+                    <p>No reviews yet. Be the first to share your experience.</p>
+                </div>
+            </div>
+
+            <div class="review-form-wrapper" id="review-form">
+                <div class="review-form-card">
+                    <h3 class="review-form-title">
+                        <i class="fa-solid fa-pen-fancy"></i> Share your experience
+                    </h3>
+                    <p class="review-form-subtitle">Tell us how your tour or activity went. Your review helps other travelers.</p>
+                    <form id="reviewForm" class="review-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="reviewName">Your name *</label>
+                                <input type="text" id="reviewName" placeholder="e.g. John Smith" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="reviewTour">Tour or activity *</label>
+                                <select id="reviewTour" required>
+                                    <option value="" disabled selected>Select an experience</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Rating *</label>
+                                <div class="star-rating" id="starRating">
+                                    <i class="fa-solid fa-star" data-value="1"></i>
+                                    <i class="fa-solid fa-star" data-value="2"></i>
+                                    <i class="fa-solid fa-star" data-value="3"></i>
+                                    <i class="fa-solid fa-star" data-value="4"></i>
+                                    <i class="fa-solid fa-star" data-value="5"></i>
+                                </div>
+                                <input type="hidden" id="reviewRating" value="0">
+                            </div>
+                            <div class="form-group">
+                                <label for="reviewDate">Experience date (optional)</label>
+                                <input type="date" id="reviewDate">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="reviewComment">Your review or testimonial *</label>
+                            <textarea id="reviewComment" placeholder="Tell us about your experience, what you enjoyed most, the service, the scenery..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary review-submit-btn">
+                            <i class="fa-solid fa-paper-plane"></i> Submit review
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <h3><img src="imagenes/logo56.PNG" alt="Roa Tours & Co." style="height:80px;width:auto;"></h3>
+                        <p>Your gateway to the most incredible experiences in Roatán. Private tours, maritime adventures, and memories that will last a lifetime.</p>
+                        <div class="footer-social">
+                            <a href="https://wa.me/50498525055" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                            <a href="https://www.instagram.com/roatoursco?igsh=MTVydDY3Y2Rvamd6OA==" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/share/1B8gHcDvG8/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://www.tiktok.com/@roatoursco?_r=1&_t=ZS-96ARDwmn1Gb" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="index.html"><span>Home</span></a></li>
+                            <li><a href="tours.html"><span>Our Services</span></a></li>
+                            <li><a href="recorridos.html"><span>Tours</span></a></li>
+                            <li><a href="actividades.html"><span>Activities</span></a></li>
+                            <li><a href="about.html"><span>About Us</span></a></li>
+                            <li><a href="mision-vision.html"><span>Mission & Vision</span></a></li>
+                            <li><a href="experiencia.html"><span>Experiences</span></a></li>
+                            <li><a href="contacto.html"><span>Contact Us</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Our Services</h4>
+                        <ul>
+                            <li><a href="cruise-packages.html"><span>Cruise Packages</span></a></li>
+                            <li><a href="actividades.html"><span>Activities</span></a></li>
+                            <li><a href="recorridos.html"><span>Tours</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col footer-newsletter">
+                        <h4>Stay Updated</h4>
+                        <p>Get special offers and news about our tours in Roatán.</p>
+                        <form onsubmit="event.preventDefault(); alert('¡Gracias por suscribirte!');">
+                            <input type="email" placeholder="Your email" required>
+                            <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-arrow-right"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© 2026 <span>Roa Tours & Co.</span> — <span>All rights reserved. Roatán, Honduras 🌴</span></p>
+                <p class="footer-quote">"Thank you for joining us at the start. This is just the beginning and we are ready to make every adventure an unforgettable memory. ☀️🌊"</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-buttons">
+        <a href="https://wa.me/50498525055" target="_blank" rel="noopener" class="floating-btn whatsapp" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span class="floating-tooltip">WhatsApp</span>
+        </a>
+        <a href="https://www.instagram.com/roatoursco?igsh=MTVydDY3Y2Rvamd6OA==" target="_blank" rel="noopener" class="floating-btn instagram" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+            <span class="floating-tooltip">Instagram</span>
+        </a>
+        <a href="https://www.facebook.com/share/1B8gHcDvG8/?mibextid=wwXIfr" target="_blank" rel="noopener" class="floating-btn facebook" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+            <span class="floating-tooltip">Facebook</span>
+        </a>
+    </div>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
