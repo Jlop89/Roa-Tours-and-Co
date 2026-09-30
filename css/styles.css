@@ -1582,6 +1582,16 @@ ul { list-style: none; }
     .form-row { grid-template-columns: 1fr; }
 }
 
+#formMessageFeedback {
+    padding: 14px 18px;
+    border-radius: var(--radius);
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+/* ===== CONTACT SECTION ===== */
+
 /* ===== REVIEWS SECTION ===== */
 .reviews-section {
     background: linear-gradient(180deg, var(--cream) 0%, var(--white) 50%, var(--cream) 100%);

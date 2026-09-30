@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Roa Tours & Co.</title>
-    <meta name="description" content="Book your experience in Roatán with Roa Tours & Co.. Contact us for tours, transportation, and personalized adventures.">
+    <meta name="description"
+        content="Book your experience in Roatán with Roa Tours & Co.. Contact us for tours, transportation, and personalized adventures.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
 
     <div class="scroll-progress" id="scrollProgress"></div>
@@ -40,7 +45,8 @@
                 <a href="mailto:roatours.co@gmail.com" class="nav-email" onclick="closeNav()">
                     <i class="fa-solid fa-envelope"></i> <span>roatours.co@gmail.com</span>
                 </a>
-                <a href="contacto.html" class="btn btn-gold" style="padding: 10px 24px; font-size: 0.85rem;" onclick="closeNav()">
+                <a href="contacto.html" class="btn btn-gold" style="padding: 10px 24px; font-size: 0.85rem;"
+                    onclick="closeNav()">
                     <i class="fa-brands fa-whatsapp"></i> <span>Book Now</span>
                 </a>
             </div>
@@ -101,30 +107,59 @@
                 <form class="contact-form reveal-right" id="contactForm">
                     <div class="form-row">
                         <div class="form-group">
-                            <label>Full name</label>
-                            <input type="text" placeholder="Your name" required>
+                            <label>Full name <span style="color:#e74c3c;">*</span></label>
+                            <input type="text" id="formName" name="name" placeholder="Tu nombre completo" required
+                                minlength="2" autocomplete="name">
                         </div>
                         <div class="form-group">
-                            <label>Email</label>
-                            <input type="email" placeholder="your.email@example.com" required>
+                            <label>Email <span style="color:#e74c3c;">*</span></label>
+                            <input type="email" id="formEmail" name="email" placeholder="tu.correo@example.com" required
+                                autocomplete="email">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Phone</label>
+                            <input type="tel" id="formPhone" name="phone" placeholder="+504 9852-5055"
+                                autocomplete="tel">
+                        </div>
+                        <div class="form-group">
+                            <label>Subject <span style="color:#e74c3c;">*</span></label>
+                            <select id="formSubject" name="subject" required>
+                                <option value="">Selecciona un motivo</option>
+                                <option value="Información general">Información general</option>
+                                <option value="Reservar tour">Reservar tour</option>
+                                <option value="Cruise packages">Cruise packages</option>
+                                <option value="Actividades">Actividades</option>
+                                <option value="Queja o reclamo">Queja o reclamo</option>
+                                <option value="Otro">Otro</option>
+                            </select>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label>Phone</label>
-                        <input type="tel" placeholder="+504 9852-5055">
+                        <label>Message <span style="color:#e74c3c;">*</span></label>
+                        <textarea id="formMessage" name="message"
+                            placeholder="Cuéntanos sobre tu experiencia ideal en Roatán..." required
+                            minlength="10"></textarea>
                     </div>
-                    <div class="form-group">
-                        <label>Message</label>
-                        <textarea placeholder="Tell us about your ideal experience in Roatán..." required></textarea>
+                    <div class="form-group" style="display:none;">
+                        <input type="text" id="honeypot" name="honeypot" tabindex="-1" autocomplete="off"
+                            style="position:absolute;left:-9999px;opacity:0;height:0;pointer-events:none;">
                     </div>
-                    <button type="submit" class="btn btn-primary" style="align-self: flex-start;">
+                    <input type="hidden" id="csrfToken" name="csrfToken" value="">
+                    <button type="submit" class="btn btn-primary" id="submitBtn" style="align-self: flex-start;">
                         <i class="fa-solid fa-paper-plane"></i> <span>Send Message</span>
                     </button>
+                    <div id="formMessageFeedback"
+                        style="display:none; margin-top:12px; padding:14px 18px; border-radius:var(--radius); font-size:0.9rem; font-weight:500;">
+                    </div>
                 </form>
             </div>
 
             <div class="contact-map reveal">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3871.437862171844!2d-86.613!3d16.299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f69d7a7b7b7b7b7%3A0x0!2sWest+Bay%2C+Roat%C3%A1n%2C+Honduras!5e0!3m2!1ses!2shn!4v1" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3871.437862171844!2d-86.613!3d16.299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f69d7a7b7b7b7b7%3A0x0!2sWest+Bay%2C+Roat%C3%A1n%2C+Honduras!5e0!3m2!1ses!2shn!4v1"
+                    allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>
@@ -135,12 +170,17 @@
                 <div class="footer-grid">
                     <div class="footer-brand">
                         <h3><img src="imagenes/logo56.PNG" alt="Roa Tours & Co." style="height:80px;width:auto;"></h3>
-                        <p>Your gateway to the most incredible experiences in Roatán. Private tours, maritime adventures, and memories that will last a lifetime.</p>
+                        <p>Your gateway to the most incredible experiences in Roatán. Private tours, maritime
+                            adventures, and memories that will last a lifetime.</p>
                         <div class="footer-social">
-                            <a href="https://wa.me/50498525055" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-                            <a href="https://www.instagram.com/roatoursco?igsh=MTVydDY3Y2Rvamd6OA==" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="https://www.facebook.com/share/1B8gHcDvG8/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="https://www.tiktok.com/@roatoursco?_r=1&_t=ZS-96ARDwmn1Gb" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                            <a href="https://wa.me/50498525055" target="_blank" rel="noopener" aria-label="WhatsApp"><i
+                                    class="fa-brands fa-whatsapp"></i></a>
+                            <a href="https://www.instagram.com/roatoursco?igsh=MTVydDY3Y2Rvamd6OA==" target="_blank"
+                                rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/share/1B8gHcDvG8/?mibextid=wwXIfr" target="_blank"
+                                rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://www.tiktok.com/@roatoursco?_r=1&_t=ZS-96ARDwmn1Gb" target="_blank"
+                                rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
                         </div>
                     </div>
                     <div class="footer-col">
@@ -169,7 +209,8 @@
                         <p>Get special offers and news about our tours in Roatán.</p>
                         <form onsubmit="event.preventDefault(); alert('¡Gracias por suscribirte!');">
                             <input type="email" placeholder="Your email" required>
-                            <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-arrow-right"></i></button>
+                            <button type="submit" aria-label="Subscribe"><i
+                                    class="fa-solid fa-arrow-right"></i></button>
                         </form>
                     </div>
                 </div>
@@ -178,21 +219,25 @@
         <div class="footer-bottom">
             <div class="container">
                 <p>© 2026 <span>Roa Tours & Co.</span> — <span>All rights reserved. Roatán, Honduras 🌴</span></p>
-                <p class="footer-quote">"Thank you for joining us at the start. This is just the beginning and we are ready to make every adventure an unforgettable memory. ☀️🌊"</p>
+                <p class="footer-quote">"Thank you for joining us at the start. This is just the beginning and we are
+                    ready to make every adventure an unforgettable memory. ☀️🌊"</p>
             </div>
         </div>
     </footer>
 
     <div class="floating-buttons">
-        <a href="https://wa.me/50498525055" target="_blank" rel="noopener" class="floating-btn whatsapp" aria-label="WhatsApp">
+        <a href="https://wa.me/50498525055" target="_blank" rel="noopener" class="floating-btn whatsapp"
+            aria-label="WhatsApp">
             <i class="fa-brands fa-whatsapp"></i>
             <span class="floating-tooltip">WhatsApp</span>
         </a>
-        <a href="https://www.instagram.com/roatoursco?igsh=MTVydDY3Y2Rvamd6OA==" target="_blank" rel="noopener" class="floating-btn instagram" aria-label="Instagram">
+        <a href="https://www.instagram.com/roatoursco?igsh=MTVydDY3Y2Rvamd6OA==" target="_blank" rel="noopener"
+            class="floating-btn instagram" aria-label="Instagram">
             <i class="fa-brands fa-instagram"></i>
             <span class="floating-tooltip">Instagram</span>
         </a>
-        <a href="https://www.facebook.com/share/1B8gHcDvG8/?mibextid=wwXIfr" target="_blank" rel="noopener" class="floating-btn facebook" aria-label="Facebook">
+        <a href="https://www.facebook.com/share/1B8gHcDvG8/?mibextid=wwXIfr" target="_blank" rel="noopener"
+            class="floating-btn facebook" aria-label="Facebook">
             <i class="fa-brands fa-facebook-f"></i>
             <span class="floating-tooltip">Facebook</span>
         </a>
@@ -205,26 +250,111 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/scripts.js"></script>
     <script>
-        const contactForm = document.getElementById('contactForm');
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const btn = this.querySelector('button[type="submit"]');
-            const original = btn.innerHTML;
-            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Enviando...';
-            btn.disabled = true;
+        (function () {
+            const contactForm = document.getElementById('contactForm');
+            const submitBtn = document.getElementById('submitBtn');
+            const feedback = document.getElementById('formMessageFeedback');
+            const csrfTokenInput = document.getElementById('csrfToken');
+            let isSubmitting = false;
 
-            setTimeout(() => {
-                btn.innerHTML = '<i class="fa-solid fa-check-circle"></i> Mensaje Enviado';
-                btn.style.background = 'linear-gradient(135deg, #43A047, #2E7D32)';
+            async function fetchCsrfToken() {
+                try {
+                    const res = await fetch('http://localhost:3001/api/csrf-token');
+                    const data = await res.json();
+                    csrfTokenInput.value = data.csrfToken;
+                } catch (e) {
+                    csrfTokenInput.value = '';
+                }
+            }
 
-                setTimeout(() => {
-                    btn.innerHTML = original;
-                    btn.disabled = false;
-                    btn.style.background = '';
-                    contactForm.reset();
-                }, 3000);
-            }, 1500);
-        });
+            fetchCsrfToken();
+
+            contactForm.addEventListener('submit', async function (e) {
+                e.preventDefault();
+                if (isSubmitting) return;
+
+                const name = document.getElementById('formName').value.trim();
+                const email = document.getElementById('formEmail').value.trim();
+                const phone = document.getElementById('formPhone').value.trim();
+                const subject = document.getElementById('formSubject').value;
+                const message = document.getElementById('formMessage').value.trim();
+                const honeypot = document.getElementById('honeypot').value;
+
+                if (honeypot) {
+                    feedback.style.display = 'block';
+                    feedback.style.background = '#FFF3CD';
+                    feedback.style.color = '#856404';
+                    feedback.style.border = '2px solid #FFC107';
+                    feedback.textContent = 'Gracias por contactarnos. Hemos recibido tu información.';
+                    return;
+                }
+
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                let errors = [];
+                if (!name || name.length < 2) errors.push('El nombre completo es obligatorio.');
+                if (!email || !emailRegex.test(email)) errors.push('El correo electrónico es obligatorio y debe ser válido.');
+                if (!subject) errors.push('El asunto es obligatorio.');
+                if (!message || message.length < 10) errors.push('El mensaje debe tener al menos 10 caracteres.');
+
+                if (errors.length > 0) {
+                    feedback.style.display = 'block';
+                    feedback.style.background = '#F8D7DA';
+                    feedback.style.color = '#721C24';
+                    feedback.style.border = '2px solid #DC3545';
+                    feedback.textContent = errors.join(' ');
+                    return;
+                }
+
+                isSubmitting = true;
+                const btnSpan = submitBtn.querySelector('span');
+                const btnIcon = submitBtn.querySelector('i');
+                const originalHTML = submitBtn.innerHTML;
+                submitBtn.disabled = true;
+                btnIcon.className = 'fa-solid fa-spinner fa-spin';
+                btnSpan.textContent = ' Enviando...';
+                feedback.style.display = 'none';
+
+                try {
+                    const res = await fetch('http://localhost:3001/api/contact', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ name, email, phone, subject, message, honeypot, csrfToken: csrfTokenInput.value })
+                    });
+                    const data = await res.json();
+
+                    if (data.success) {
+                        btnIcon.className = 'fa-solid fa-check-circle';
+                        btnSpan.textContent = '';
+                        submitBtn.style.background = 'linear-gradient(135deg, #43A047, #2E7D32)';
+                        feedback.style.display = 'block';
+                        feedback.style.background = '#D4EDDA';
+                        feedback.style.color = '#155724';
+                        feedback.style.border = '2px solid #28A745';
+                        feedback.textContent = '¡Gracias por contactarnos! Hemos recibido tu información y pronto nos pondremos en contacto contigo.';
+                        contactForm.reset();
+                        fetchCsrfToken();
+                    } else {
+                        throw new Error(data.error || 'Error desconocido');
+                    }
+                } catch (err) {
+                    btnIcon.className = 'fa-solid fa-exclamation-circle';
+                    submitBtn.style.background = 'linear-gradient(135deg, #e74c3c, #c0392b)';
+                    feedback.style.display = 'block';
+                    feedback.style.background = '#F8D7DA';
+                    feedback.style.color = '#721C24';
+                    feedback.style.border = '2px solid #DC3545';
+                    feedback.textContent = 'No pudimos enviar tu información. Por favor, inténtalo nuevamente.';
+                } finally {
+                    setTimeout(() => {
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = originalHTML;
+                        submitBtn.style.background = '';
+                        isSubmitting = false;
+                    }, 3000);
+                }
+            });
+        })();
     </script>
 </body>
+
 </html>
