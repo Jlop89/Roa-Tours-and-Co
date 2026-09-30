@@ -95,7 +95,31 @@ app.post("/api/contact", limiter, contactLimiter, async (req, res) => {
     const cleanMessage = message.trim();
 
 
-
+    const mailOptions = {
+      from: `"${cleanName}" <${cleanEmail}>`,
+      to: RECIPIENT_EMAIL,
+      subject: `Nuevo contacto desde la página web – ${cleanName}`,
+      html: `
+        <div style="font-family: 'Poppins', sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #FFF8F0; border-radius: 16px;">
+          <div style="text-align: center; margin-bottom: 24px;">
+            <h2 style="color: #0D2137; font-family: 'Playfair Display', serif; margin: 0;">NUEVO CONTACTO DESDE LA PÁGINA WEB</h2>
+            <div style="width: 60px; height: 3px; background: linear-gradient(90deg, #C9A96E, #00BCD4); margin: 12px auto 0; border-radius: 2px;"></div>
+          </div>
+          <div style="background: #FFFFFF; padding: 24px; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.06);">
+            <p style="margin: 0 0 16px; font-size: 0.9rem; color: #2C3E50;"><strong style="color: #00BCD4;">Nombre:</strong> ${cleanName}</p>
+            <p style="margin: 0 0 16px; font-size: 0.9rem; color: #2C3E50;"><strong style="color: #00BCD4;">Correo:</strong> ${cleanEmail}</p>
+            <p style="margin: 0 0 16px; font-size: 0.9rem; color: #2C3E50;"><strong style="color: #00BCD4;">Teléfono:</strong> ${cleanPhone || "No proporcionado"}</p>
+            <p style="margin: 0 0 16px; font-size: 0.9rem; color: #2C3E50;"><strong style="color: #00BCD4;">Asunto:</strong> ${cleanSubject}</p>
+            <p style="margin: 0 0 16px; font-size: 0.9rem; color: #2C3E50;"><strong style="color: #00BCD4;">Mensaje:</strong></p>
+            <div style="background: #FFF8F0; padding: 16px; border-radius: 8px; border-left: 4px solid #C9A96E; margin-top: 8px;">
+              <p style="margin: 0; font-size: 0.9rem; color: #2C3E50; line-height: 1.7;">${cleanMessage}</p>
+            </div>
+          </div>
+          <p style="text-align: center; margin-top: 20px; font-size: 0.8rem; color: #5D6D7E;">Este correo fue enviado automáticamente desde el formulario de contacto de Roa Tours & Co.</p>
+        </div>
+      `,
+      text: `NUEVO CONTACTO DESDE LA PÁGINA WEB\n\nNombre: ${cleanName}\nCorreo: ${cleanEmail}\nTeléfono: ${cleanPhone}\nAsunto: ${cleanSubject}\nMensaje: ${cleanMessage}`
+    };
     const { error } = await resend.emails.send({
       from: 'Roa Tours & Co <contacto@roatoursco.com>',
       to: [RECIPIENT_EMAIL],
@@ -118,28 +142,3 @@ app.post("/api/contact", limiter, contactLimiter, async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Servidor Roa Tours & Co. corriendo en puerto ${PORT}`);
 });
-const mailOptions = {
-  from: `"${cleanName}" <${cleanEmail}>`,
-  to: RECIPIENT_EMAIL,
-  subject: `Nuevo contacto desde la página web – ${cleanName}`,
-  html: `
-        <div style="font-family: 'Poppins', sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #FFF8F0; border-radius: 16px;">
-          <div style="text-align: center; margin-bottom: 24px;">
-            <h2 style="color: #0D2137; font-family: 'Playfair Display', serif; margin: 0;">NUEVO CONTACTO DESDE LA PÁGINA WEB</h2>
-            <div style="width: 60px; height: 3px; background: linear-gradient(90deg, #C9A96E, #00BCD4); margin: 12px auto 0; border-radius: 2px;"></div>
-          </div>
-          <div style="background: #FFFFFF; padding: 24px; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.06);">
-            <p style="margin: 0 0 16px; font-size: 0.9rem; color: #2C3E50;"><strong style="color: #00BCD4;">Nombre:</strong> ${cleanName}</p>
-            <p style="margin: 0 0 16px; font-size: 0.9rem; color: #2C3E50;"><strong style="color: #00BCD4;">Correo:</strong> ${cleanEmail}</p>
-            <p style="margin: 0 0 16px; font-size: 0.9rem; color: #2C3E50;"><strong style="color: #00BCD4;">Teléfono:</strong> ${cleanPhone || "No proporcionado"}</p>
-            <p style="margin: 0 0 16px; font-size: 0.9rem; color: #2C3E50;"><strong style="color: #00BCD4;">Asunto:</strong> ${cleanSubject}</p>
-            <p style="margin: 0 0 16px; font-size: 0.9rem; color: #2C3E50;"><strong style="color: #00BCD4;">Mensaje:</strong></p>
-            <div style="background: #FFF8F0; padding: 16px; border-radius: 8px; border-left: 4px solid #C9A96E; margin-top: 8px;">
-              <p style="margin: 0; font-size: 0.9rem; color: #2C3E50; line-height: 1.7;">${cleanMessage}</p>
-            </div>
-          </div>
-          <p style="text-align: center; margin-top: 20px; font-size: 0.8rem; color: #5D6D7E;">Este correo fue enviado automáticamente desde el formulario de contacto de Roa Tours & Co.</p>
-        </div>
-      `,
-  text: `NUEVO CONTACTO DESDE LA PÁGINA WEB\n\nNombre: ${cleanName}\nCorreo: ${cleanEmail}\nTeléfono: ${cleanPhone}\nAsunto: ${cleanSubject}\nMensaje: ${cleanMessage}`
-};
