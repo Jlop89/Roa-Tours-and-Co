@@ -11,7 +11,9 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 const RECIPIENT_EMAIL = process.env.RECIPIENT_EMAIL || "Jennifergriselllopez@gmail.com";
 
-app.use(helmet());
+app.use(helmet({
+  contentSecurityPolicy: false
+}));
 app.use(cors({ origin: true, credentials: true }));
 app.use(express.json({ limit: "10kb" }));
 app.use(express.urlencoded({ extended: true }));
