@@ -4,6 +4,8 @@ const cors = require("cors");
 const helmet = require("helmet");
 const rateLimit = require("express-rate-limit");
 const nodemailer = require("nodemailer");
+const { Resend } = require('resend');
+const resend = new Resend(process.env.RESEND_API_KEY);
 const crypto = require("crypto");
 const path = require("path");
 
@@ -92,11 +94,35 @@ app.post("/api/contact", limiter, contactLimiter, async (req, res) => {
     const cleanSubject = subject.trim();
     const cleanMessage = message.trim();
 
-    const mailOptions = {
-      from: `"${cleanName}" <${cleanEmail}>`,
-      to: RECIPIENT_EMAIL,
-      subject: `Nuevo contacto desde la página web – ${cleanName}`,
-      html: `
+
+
+    const { error } = await resend.emails.send({
+      from: 'Roa Tours & Co <contacto@roatoursco.com>',
+      to: [RECIPIENT_EMAIL],
+      replyTo: cleanEmail,
+      subject: mailOptions.subject,
+      html: mailOptions.html,
+      text: mailOptions.text
+    });
+
+    if (error) {
+      throw new Error(error.message);
+    }
+    res.json({ success: true, message: "Gracias por contactarnos. Hemos recibido tu información y pronto nos pondremos en contacto contigo." });
+  } catch (error) {
+    console.error("Error sending email:", error);
+    res.status(500).json({ error: "No pudimos enviar tu información. Por favor, inténtalo nuevamente." });
+  }
+});
+
+app.listen(PORT, () => {
+  console.log(`Servidor Roa Tours & Co. corriendo en puerto ${PORT}`);
+});
+const mailOptions = {
+  from: `"${cleanName}" <${cleanEmail}>`,
+  to: RECIPIENT_EMAIL,
+  subject: `Nuevo contacto desde la página web – ${cleanName}`,
+  html: `
         <div style="font-family: 'Poppins', sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #FFF8F0; border-radius: 16px;">
           <div style="text-align: center; margin-bottom: 24px;">
             <h2 style="color: #0D2137; font-family: 'Playfair Display', serif; margin: 0;">NUEVO CONTACTO DESDE LA PÁGINA WEB</h2>
@@ -115,17 +141,5 @@ app.post("/api/contact", limiter, contactLimiter, async (req, res) => {
           <p style="text-align: center; margin-top: 20px; font-size: 0.8rem; color: #5D6D7E;">Este correo fue enviado automáticamente desde el formulario de contacto de Roa Tours & Co.</p>
         </div>
       `,
-      text: `NUEVO CONTACTO DESDE LA PÁGINA WEB\n\nNombre: ${cleanName}\nCorreo: ${cleanEmail}\nTeléfono: ${cleanPhone}\nAsunto: ${cleanSubject}\nMensaje: ${cleanMessage}`
-    };
-
-    await transporter.sendMail(mailOptions);
-    res.json({ success: true, message: "Gracias por contactarnos. Hemos recibido tu información y pronto nos pondremos en contacto contigo." });
-  } catch (error) {
-    console.error("Error sending email:", error);
-    res.status(500).json({ error: "No pudimos enviar tu información. Por favor, inténtalo nuevamente." });
-  }
-});
-
-app.listen(PORT, () => {
-  console.log(`Servidor Roa Tours & Co. corriendo en puerto ${PORT}`);
-});
+  text: `NUEVO CONTACTO DESDE LA PÁGINA WEB\n\nNombre: ${cleanName}\nCorreo: ${cleanEmail}\nTeléfono: ${cleanPhone}\nAsunto: ${cleanSubject}\nMensaje: ${cleanMessage}`
+};
