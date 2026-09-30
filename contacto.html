@@ -259,7 +259,7 @@
 
             async function fetchCsrfToken() {
                 try {
-                    const res = await fetch('http://localhost:3001/api/csrf-token');
+                    const res = await fetch('https://roa-tours-and-co.onrender.com/api/csrf-token');
                     const data = await res.json();
                     csrfTokenInput.value = data.csrfToken;
                 } catch (e) {
